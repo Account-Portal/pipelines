@@ -13,10 +13,12 @@ def start(){
   def uiweb_pipeline=load './pipelines/ui-web.groovy'
   if(pckg=='full'){
     print 'full'
+    stage('full-pipeline'){
     parallel(
-      lambda_pipeline.start(),
-      uiweb_pipeline.start()
+      lambda: lambda_pipeline.start(),
+      uiweb: uiweb_pipeline.start()
       )
+    }
   }
   else
   {
