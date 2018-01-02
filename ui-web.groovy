@@ -1,5 +1,5 @@
 def start(){
-  stage('ui-web pipeline'){
+  stage('ui-web pipeline begins'){
     print 'this is ui-web pipeline'
   }
   //Build the app
