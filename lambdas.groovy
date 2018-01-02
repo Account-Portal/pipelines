@@ -1,5 +1,5 @@
 def start(){
-  stage('Lambda pipeline'){
+  stage('Lambda pipeline Begins'){
     print 'this is lambda pipeline'
   }
   //Build the app
