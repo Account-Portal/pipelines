@@ -16,10 +16,13 @@ def start(){
     lambda_pipeline.start()
     uiweb_pipeline.start()
   }
-  else
+  else if(pckg=='lambda')
   {
-    print pckg
     lambda_pipeline.start()
+  }
+  else if(pckg=='ui-web')
+  {
+    uiweb_pipeline.start()
   }
 }
 def tearDown(){
