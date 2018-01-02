@@ -1,4 +1,7 @@
 def start(){
+  stage('ui-web pipeline'){
+    print 'this is ui-web pipeline'
+  }
   //Build the app
   //Run the tests to check if build is good to go to dev
   //Deploy to dev test and run tests again to make sure everything is fine after deployment
@@ -10,7 +13,7 @@ def start(){
   //Deploy to stg live and run tests
   //Deploy to prod blue and run tests to ensure everything is fine after deployment
   //Do switch over after blue is fine
-  print 'this is ui-web pipeline'
+  
 }
 
 return this
