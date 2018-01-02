@@ -15,8 +15,8 @@ def start(){
     print 'full'
     stage('full-pipeline'){
     parallel(
-      lambda: lambda_pipeline.start(),
-      uiweb: uiweb_pipeline.start()
+      "lambda": lambda_pipeline.start(),
+      "ui-web": uiweb_pipeline.start()
       )
     }
   }
@@ -28,10 +28,7 @@ def start(){
 }
 def tearDown(){
   stage('tearDown'){
-  def me =sh (script:'git diff HEAD^ HEAD --name-only',returnStdout:true).trim().split('/')
-  def pckg= me.length>1?me[1]:'full'
-  
-  currentBuild.displayName = pckg+currentBuild.displayName
+  print 'this is tearDown'
   }
 }
 return this
