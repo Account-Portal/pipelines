@@ -13,7 +13,7 @@ def start(){
   //Deploy to stg live and run tests
   //Deploy to prod blue and run tests to ensure everything is fine after deployment
   //Do switch over after blue is fine
-  
+  print PIPELINE_URL
 }
 
 return this
