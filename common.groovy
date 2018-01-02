@@ -1,6 +1,5 @@
 def pckg=""
-def lambda_pipeline=load './pipelines/lambdas.groovy'
-def uiweb_pipeline=load './pipelines/ui-web.groovy'
+
 def setUp(){
   stage('setUp'){
   def me =sh (script:'git diff HEAD^ HEAD --name-only',returnStdout:true).trim().split('/')
@@ -10,6 +9,8 @@ def setUp(){
   }
 }
 def start(){
+  def lambda_pipeline=load './pipelines/lambdas.groovy'
+  def uiweb_pipeline=load './pipelines/ui-web.groovy'
   if(pckg=='full'){
     print 'full'
     parallel(
