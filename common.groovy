@@ -10,12 +10,14 @@ def setUp(){
 def start(){
   if(pckg=='full'){
     print 'full'
-    def pipeline=load 'pipelines/lambda.groovy'
+    def pipeline=load './pipelines/lambdas.groovy'
     pipeline.start()
   }
   else
   {
     print pckg
+    def pipeline=load './pipelines/lambdas.groovy'
+    pipeline.start()
   }
 }
 def tearDown(){
